@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<title>Autobiography</title>
 	</head>
+
 	<body>
 		<header class="header">
 			<a href="#home" class="logo">CS</a>
@@ -25,216 +26,253 @@
 			</nav>
 	</header>
 
-	<section class="glass-container" id="home">
+	<section class="light-container" id="home">
 			
-		<div class="description">
-			<div class="user-img">
-				<img src="img/user-img1.png" alt="user-img1.png">
-			</div>
-			<div class="wrapper">
-				<div class="title">
-					<h2>Carl Sobrepeña</h2>
-					<h3>Front-end Developer</h3>
+		<div class="wrapper-home">
+			<div class="wrapper-leftHome">
+				<div class="wrapper-userImg">
+					<img src="img/user-img1.png" alt="user-img1.png">
 				</div>
-				<div class="icons-socials">
+				
+				<div class="wrapper-userDetails">
+					
+					<div class="title">
+					<h3>Carl Sobrepeña</h3>
+					<h4>Front-end Developer</h4>
+					</div>
+				</div>
+
+				<div class="icons-social">
 					<i class='bx bxl-facebook-circle'></i>
 					<i class='bx bxl-instagram-alt' ></i>
 					<i class='bx bxl-github' ></i>
 				</div>
+				
+			</div>
+
+			<div class="wrapper-rightHome">
+				<div class="early-life">
+					<p>
+						Hi! I am Carl, 23 years old. I am a third-year Computer Science student at CIIT College of Arts and Technology. I am an aspiring software engineer in the future. I also explored the graphic design field to enhance my creativity skills and worked for a logo design company as a part-time graphic designer.
+					</p>
+				</div>
 				<div class="buttons">
-					<button id="btn-hire">Hire Me</button>
-					<button id="btn-dl-resume">Resumè</button>
+					<a class="btn" href="">
+						<p>Hire Me</p>
+					</a>
+					<a class="btn" href="">
+						<p>Resumè</p>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Timeline Container -->
-	<section class="glass-container" id="timeline">
-			<div class="title">
-				<h2 id="timeline-header">TIMELINE</h2>
-			</div>
-			<div class="timeline-card-group">
-					<div class="timeline-card">
-							<h2>June 27, 2000</h2>
-							<input type="checkbox" id="collapse1">
-							<label for="collapse1">
-								<i class='bx bx-chevron-down' ></i>
-							</label>
-							<p>On this day I was born as the 2nd and last child in my family.</p>
-					</div>
-					<div class="timeline-card">
-							<h2>2007</h2>
-							<i class='bx bx-chevron-down' ></i>
-							<p>I attended elementary school at Virgen Del Pillar, Rodriguez, Rizal.</p>
-					</div>
-					<div class="timeline-card">
-							<h2>2012</h2>
-							<i class='bx bx-chevron-down' ></i>
-							<p>Graduated from elementary school and attended junior high school at Center for Positive Futures Inc., Rodriguez, Rizal later that year.</p>
-					</div>
-			</div>
-			<div class="timeline-card-group">
-				<div class="timeline-card">
-						<h2>2016</h2>
-						<i class='bx bx-chevron-down ' ></i>
-						<p>Graduated from junior high school and attended senior high school at Roosevelt College Inc. - Rodriguez Campus, Rodriguez, Rizal; later that year.</p>
-				</div>
-				<div class="timeline-card">
-						<h2>2019</h2>
-						<i class='bx bx-chevron-down' ></i>
-						<p>Graduated from senior high school and took BS Information Technology Major in Animation and Game Development at FEU Institute of Technology later that year.</p>
-				</div>
-				<div class="timeline-card">
-						<h2>January 2020</h2>
-						<i class='bx bx-chevron-down' ></i>
-						<p>I was able to bring back my passion for human beatbox. Joined and won a talent show competition at FEU Tech’s Fresh Night.</p>
-				</div>
-			</div>
+	<section class="dark-container" id="timeline">
 
-			<div class="timeline-card-group">
-					<div class="timeline-card">
-							<h2>February 2020</h2>
-							<i class='bx bx-chevron-down' ></i>
-							<p>After a month I joined and also earned first place in Fatal Rampage 2019, a beatbox battle competition.</p>
-					</div>
-					<div class="timeline-card">
-							<h2>June 2020</h2>
-							<i class='bx bx-chevron-down' ></i>
-							<p>Due to some circumstances caused by the pandemic, transferred to CIIT and shifted to Computer science.</p>
-					</div>
-					<div class="timeline-card">
-							<h2>February 2022</h2>
-							<i class='bx bx-chevron-down' ></i>
-							<p>While studying, I worked as a part-time graphic designer in a logo design company.</p>
-					</div>
+		<div class="wrapper-timeline">
+
+			<div class="wrapper-title">
+				<h1 id="timeline-header">TIMELINE</h1>
 			</div>
+			
+			<div class="wrapper-row-timelineCard">
+				<div id="year1" class="timelineCard">
+					<h4 >2000</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year1modal" class="modal">
+					<div class="modalContent">
+						<span id="year1close"><i class='bx bx-x'></i></span>
+						<h4>2000</h4>
+						<h3>June 27, 2000</h3>
+						<p>On this day I was born as the 2nd and last child in my family.</p>
+					</div>
+				</div>
+				
+				<div id="year2" class="timelineCard">
+					<h4>2007</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year2modal" class="modal">
+					<div class="modalContent">
+						<span id="year2close" ><i class='bx bx-x'></i></span>
+						<h4>2007</h4>
+						<h3>June 2007</h3>
+						<p>I took elementary school at Virgen Del Pillar, Rodriguez, Rizal. It was a catholic school with a big campus. We used to play in the fields where we catch dragonflies and grasshoppers.</p>
+					</div>
+				</div>
+
+				<div id="year3" class="timelineCard">
+					<h4>2012</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year3modal" class="modal">
+					<div class="modalContent">
+						<span id="year3close"><i class='bx bx-x'></i></span>
+						<h4>2012</h4>
+						<h3>June 2012</h3>
+						<p>I took junior high school at Center for Positive Futures Inc., Rodriguez, Rizal later that year. This is the most memorable time in my life as this is the time I meet all my closest friends.</p>
+					</div>
+				</div>
+
+				<div id="year4" class="timelineCard">
+					<h4>2016</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year4modal" class="modal">
+					<div class="modalContent">
+						<span id="year4close"><i class='bx bx-x'></i></span>
+						<h4>2016</h4>
+						<h3>June 2016</h3>
+						<p>I took senior high school at Roosevelt College Inc. - Rodriguez Campus, Rodriguez, Rizal. I served as Vice president of our school's IT Club for a year.</p>
+					</div>
+				</div>
+
+				<div id="year5" class="timelineCard">
+					<h4>2019</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year5modal" class="modal">
+					<div class="modalContent">
+						<span id="year5close"><i class='bx bx-x'></i></span>
+						<h4>2019</h4>
+						<h3>August 2019</h3>
+						<p> I studied BS Information Technology Major in Animation and Game Development at FEU Institute of Technology later that year. This's been the most exciting part of my life as I got the chance to explore a lot of things whenever I had the opportunity to do so.</p>
+					</div>
+				</div>
+
+				<div id="year6" class="timelineCard">
+					<h4>2020</h4>
+					<h3><i class='bx bx-chevron-down' ></i></h3>
+				</div>
+				<div id="year6modal" class="modal">
+					<div class="modalContent">
+						<span id="year6close"><i class='bx bx-x'></i></span>
+						<h4>2020</h4>
+						<h3>January 2020</h3>
+						<p>I was able to bring back my passion for Human Beat box. I joined and also earned first place in Fatal Rampage 2019, a beat box battle competition. After a month, I joined and won a talent show competition at FEU Tech’s Fresh Night.</p>
+						<h3>June 2020</h3>
+						<p>Due to some circumstances caused by the pandemic, transferred to CIIT and shifted to Computer science.</p>
+						</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	 <!-- Portfolio Container -->
-<div class="left-wing">
-	 <section class="glass-container" id="projects">
-		<div class="title">
-			<h2>PORTFOLIO</h2>
-		</div>
-		<div class="glass-container project-container">
-			<div class="proj-group-title">
-				<h2>WINDOWS APP</h2>
-				<div class="logo-icons">
-					<i class='bx bxl-windows' ></i>
-					<i class='bx bx-laptop'></i>
-					<i class='bx bx-desktop' ></i>
-				</div>
-			</div>
-			<div class="project-group">
-				<div class="project-card">
-					<p><b>PANTRYY</b></p>
-					<p>A pantry system application that helps users organize their groceries, household equipment, and other items at home conveniently.</p>
-					<p><i>Created using DotNet; Runs in Windows</i></p>
-				</div>
-				<div class="project-card">
-					<p><b>PLACEHOLDER</b></p>
-					<p>A library system application that helps users borrow and return books digitally.</p>
-					<p><i>Created using DotNet; Runs in Windows</i></p>
-				</div>
-				<div class="project-card">
-					<p><b>SAFETY FRENZY</b></p>
-					<p>It is a classic catcher game that promotes safety measures during the pandemic.</p>
-					<p><i>Created using DotNet; Runs in Windows</i></p>
-				</div>
-			</div>
-			<label for="">
-				<i class='bx bx-chevron-down' id="project-collapse"></i>
-			</label>
-		</div>
 
-		<div class="glass-container project-container">
-			<div class="proj-group-title">
-				<h2>WEB DEV</h2>
-				<div class="logo-icons">
-					<i class='bx bxl-html5' ></i>
-					<i class='bx bxl-css3' ></i>
-					<i class='bx bxl-javascript' ></i>
+	<section class="light-container" id="projects">
+		<div class="wrapper-projects">
+			<div class="wrapper-title">
+				<h1>PROJECTS</h1>
+			</div>
+			<div class="project-containerDown">
+				<div class="proj-group-title">
+					<h2>WINDOWS APP</h2>
+					<div class="logo-icons">
+						<i class='bx bxl-windows' ></i>
+						<i class='bx bx-laptop'></i>
+						<i class='bx bx-desktop' ></i>
+					</div>
 				</div>
+				<div class="project-group">
+					<div class="project-card">
+						<p><b>PANTRYY</b></p>
+						<p><i>Created using DotNet; Runs in Windows</i></p>
+						<p class="proj-desc">A pantry system application that helps users organize their groceries, household equipment, and other items at home conveniently.</p>
+					</div>
+					<div class="project-card">
+						<p><b>PLACEHOLDER</b></p>
+						<p><i>Created using DotNet; Runs in Windows</i></p>
+						<p class="proj-desc">A library system application that helps users borrow and return books digitally.</p>
+					</div>
+					<div class="project-card">
+						<p><b>SAFETY FRENZY</b></p>
+						<p><i>Created using DotNet; Runs in Windows</i></p>
+						<p class="proj-desc">It is a classic catcher game that promotes safety measures during the pandemic.</p>
+					</div>
+				</div>
+				<!-- <label for="">
+					<i class='bx bx-chevron-down' id="project-collapse"></i>
+				</label> -->
 			</div>
 			
-			<div class="project-card">
-				<p><b>POKÈDEX</b></p>
-				<p>An online Pokemon encyclopedia inspired by the famous TV show, Pokèmon. It is connected to PokèAPI. <a href="https://pokeapi.co/">(https://pokeapi.co/)</a></p>
-				<p><i>Created HTML, CSS, and Javascript</i></p>
+			<div class="project-containerUp">
+				<div class="proj-group-title">
+					<h2>GAME DESIGN</h2>
+					<div class="logo-icons">
+						<i class='bx bxs-chess'></i>
+						<i class='bx bxs-game' ></i>
+						<i class='bx bxs-dice-5' ></i>
+					</div>
+				</div>
+				<div class="project-group">
+					<div class="project-card">
+						<p><b>PAHIMAKAS - THE LAST FAREWELL (GAMEPITCH)</b></p>
+						<p>A strategy-rhythm game with characters, settings, and events inspired by Filipino Mythology and Tradition.</p>
+					</div>
+				</div>
+				<!-- <label for="">
+					<i class='bx bx-chevron-down' id="project-collapse"></i>
+				</label> -->
 			</div>
-			<label for="">
-				<i class='bx bx-chevron-down' id="project-collapse"></i>
-			</label>
-		</div>
+		</div>	
+	</section>
 
-		<div class="glass-container project-container">
-			<div class="proj-group-title">
-				<h2>GAME DESIGN</h2>
-				<div class="logo-icons">
-					<i class='bx bxs-chess'></i>
-					<i class='bx bxs-game' ></i>
-					<i class='bx bxs-dice-5' ></i>
+
+
+	<!-- <section class="dark-container" id="hobbies">'
+		<div class="wrapper-hobbies">
+			<div class="wrapper-title">
+				<h1>INTERESTS</h1>
+			</div>
+			<div class="hobbies-wrapper">
+				<div class="hobby-card">
+					<h2>ANIME</h2>
+				</div>
+				<div class="hobby-card">
+					<h2>MOTORCYCLE ADVENTURES</h2>
+				</div>
+				<div class="hobby-card">
+					<h2>BEAT BOX</h2>
 				</div>
 			</div>
-			<div class="project-card">
-				<p><b>PAHIMAKAS - THE LAST FAREWELL (GAMEPITCH)</b></p>
-				<p>A strategy-rhythm game with characters, settings, and events inspired by Filipino Mythology and Tradition.</p>
-			</div>
-			<label for="">
-				<i class='bx bx-chevron-down' id="project-collapse"></i>
-			</label>
 		</div>
-	</section>
-</div>
 
-<div class="right-wing">
-	<section class="glass-container" id="hobbies">
-		<div class="title">
-			<h2>INTERESTS</h2>
-		</div>
-		<div class="glass-container hobby-card">
-			<div class="card-image">
-				<!-- <img src="img/hobby-1.jpg" alt=""> -->
-			</div>
-			<h2>MOTORCYLE ADVENTURES</h2>
-		</div>
-		<div class="glass-container hobby-card">
-			<div class="card-image">
-				<!-- <img src="img/hobby-2.jpg" alt=""> -->
-			</div>
-			<h2>ANIME</h2>
-		</div>
-		<div class="glass-container hobby-card">
-			<div class="card-image">
-				<!-- <img src="img/hobby-3.jpg" alt=""> -->
-			</div>
-			<h2>BEATBOX</h2>
-		</div>
-	</section>
+	</section> -->
 
-	<section class="glass-container" id="contactMe" >
-		<div class="contact-header">
-			<h2>CONTACT ME</h2>
-			<p>
+	<section class="light-container" id="contactMe" >
+		<div class="wrapper-contactMe">
+			<div class="contact-header">
+				<h2>CONTACT ME</h2>
+				<p>
 					Got a question? I'd love to hear from you. Send me a message and we'll respond as soon as possible.
-			</p>
-	</div>
-	<form>
-			<label for="name">NAME:</label>
-			<input type="text" name="name" id="name" placeholder="NAME" required>
-			<label for="email">EMAIL ADDRESS:</label>
-			<input type="text" name="email" id="email" placeholder="EMAIL@DOMAIN.COM" required>
-			<label for="agenda">AGENDA:</label>
-			<select name="agenda" id="agenda" required>
+				</p>
+			</div>
+			<form>
+				<label for="name">NAME:</label>
+				<input type="text" name="name" id="name" placeholder="NAME" required>
+				<label for="email">EMAIL ADDRESS:</label>
+				<input type="email" name="email" id="email" placeholder="EMAIL@DOMAIN.COM" required>
+				<label for="agenda">AGENDA:</label>
+				<select name="agenda" id="agenda" required>
 					<option value="Inquiry">INQUIRY</option>
 					<option value="Project Proposal">FOLLOW-UP</option>
 					<option value="Others">OTHERS</option>
-			</select>
-			<input type="submit" id="btn_send" value="SEND">
-	</form>
+				</select>
+				<label for="message">MESSAGE:</label>
+				<textarea name="message" id="message" cols="30" rows="5" placeholder="WHAT CAN I DO FOR YOU?"></textarea>
+				
+				<div class="submit-wrapper">
+					<h2>SEND</h2>
+					<i class='bx bx-paper-plane'></i>
+				</div>
+			</form>
+		</div>
 	</section>
-</div>
-
+		
+	<script src="js/script.js"></script>
 	</body>
 </html>
