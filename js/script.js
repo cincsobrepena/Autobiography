@@ -81,19 +81,6 @@ close6.addEventListener('click', function (){
 });
 
 
-
-
-
-// When the user clicks the button, open the modal
-// function openModal(modal) {
-//     console.log("ckieckas");
-//     modal.style.display = "block";
-//     modal.style.animation = "fade-in 1s ease";
-// }
-
-// /
-
-
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
@@ -115,3 +102,22 @@ window.onclick = function(event) {
   }
 
 }
+
+var slideIndex = 1;
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var slides = document.getElementsByClassName("slide");
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    // Display the first slide
+    showSlides(slideIndex);

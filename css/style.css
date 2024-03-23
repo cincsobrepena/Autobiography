@@ -119,44 +119,53 @@ h4{
 
 
 .light-container {
-	height: fit-content;
-	min-height: 100vh;
-	width: 100%;
 	position:relative;
-	padding: 2.5rem;
+	min-height: 100vh;
+	height: auto;
+	width: 100%;
+	/* padding: 2.5rem; */
 	background-color: #101415;
 }
 
 .dark-container {
-	height: fit-content;
+	position:relative;
 	min-height: 100vh;
+	height: auto;
 	width: 100%;
-	position: relative;
-	padding: 2.5rem;
+	/* padding: 2.5rem; */
 	background-color: #0a0d0e;
 }
 
 .wrapper-home {
+	display: flex;
+	justify-content: center;
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	background-color: rgb(157, 9, 28);
+	/* max-width: 1500px; */
+	min-height: 100vh;
+	margin: 7vh auto 0;
+	/* background-color: rgb(157, 9, 28); */
 }
 
 .wrapper-leftHome{
-	position: absolute;
-	top: 50%;
-	left: 25%;
-	transform: translate(-50%, -50%);
-	width: 40%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	float: left;
+	width: 50%;
+	height: auto;
 }
 
 .wrapper-rightHome {
-	position: absolute;
-	top: 50%;
-	right: 25%;
-	transform: translate(50%, -50%);
-	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	flex-direction: column;
+	position: relative;
+	float: left;
+	height: auto;
+	width: 50%;
 }
 
 .wrapper-userImg {
@@ -211,13 +220,13 @@ h4{
 	text-shadow: .3rem 1rem 1rem #000000;
 }
 
-.early-life p {
-	text-align: center;
-	font-size: clamp(.3rem, 8vw, 1.5rem);
+.early-life{
+	width: 70%;
 }
 
-.buttons {
-	margin-bottom: 1rem;
+.early-life p {
+	text-align: justify;
+	font-size: 1.5rem;
 }
 
 .btn {
@@ -227,7 +236,8 @@ h4{
 	border: solid .11rem white;
 	border-radius: .5rem;
 	padding: .5rem;
-	margin: .5rem;
+	margin-top: 2rem;
+	margin-right: 2rem;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
@@ -289,10 +299,13 @@ h4{
 
 
 
-/* TIMELINE */
+/*  TIMELINE DESIGN */
 
 .wrapper-timeline {
-	padding-bottom: 2rem;
+	height: 80vh;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	padding-top: 10rem;
 }
 
 .wrapper-timeline .wrapper-title {
@@ -305,14 +318,14 @@ h4{
 }
 
 .wrapper-row-timelineCard {
+	margin: 20vh 0;
 	text-align: center;
 }
 
 .timelineCard {
-	aspect-ratio: 1/1;
 	display: inline-block;
-	width: 13%;
-	max-width: 250px;
+	width: 12rem;
+	height: 12rem;
 
 	margin: .8rem;
 	padding: 1rem;
@@ -425,11 +438,10 @@ h4{
 .modalContent {
 	width: 60%;
 	height: fit-content;
-	max-width: 1500px;
 	position:relative;
-	float: left;
+	top: 40%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 
 	margin-top:2rem;
 	padding: 2.5rem;
@@ -470,7 +482,7 @@ h4{
 .modalContent h4 {
 	text-shadow: .5rem .5rem .5rem black;
 	text-align: center;
-	font-size: 5rem;
+	font-size: 3rem;
 	margin: 1rem 1.5rem;
 }
 
@@ -568,35 +580,165 @@ h4{
 	margin: 2rem auto;
 }
 
-.project-card {
-	background: #101717;
+
+.project-card-container {
+	perspective: 1000;
+	/* background: #101717; */
 	display: inline-block;
 	width: 25%;
 	height: 40vh;
+	
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+
+.card:hover {
+	transform: rotateY(180deg);
+}
+
+.card-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
 	text-align: center;
 	padding: 2rem;
 	border-radius: 2rem;
 	transition: 1s ease;
-	box-shadow: -.4rem -.3rem .5rem #171c1e, .4rem .8rem 1rem #090b0c;
+	
 }
 
-.project-card b {
+.card-front {
+	color: white;
+	box-shadow: -.4rem -.3rem .5rem #191f21, .4rem .8rem 1rem #090b0c;
+}
+
+.card-back {
+	color: white;
+	transform: rotateY(180deg);
+	box-shadow: -.4rem -.3rem .5rem #171c1e, .4rem .8rem 1rem #090b0c;
+	background: #101717;
+}
+
+.card b {
 	font-size: 1.5rem;
 }
 
-.project-card i {
-	font-size: .8rem;
+.card i {
+	font-size: 1.3rem;
 	font-weight: 50;
 }
-.project-card .proj-desc{
-	/* display: none; */
+.card .proj-desc{
 	margin-top: .3rem;
+} 
+
+.wrapper-cardImg {
+	margin: 2rem 0;
+	width: 100%;
+	height: 60%;
+	overflow: hidden;
 }
 
-/* .project-card:hover, .project-card:hover .proj-desc{
-	height: 38vh;
-	display: block;
-} */
+.wrapper-cardImg img{
+	width: 100%;
+	height: auto;
+}
+
+/* HOBBIES DESIGN */
+
+#hobbies.dark-container {
+	padding: 13vh 0;
+	height: fit-content;
+}
+
+.wrapper-hobbies {
+	margin-top: 10vh;
+}
+
+.wrapper-hobbies .wrapper-title {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.carousel {
+	width: 90%; /* Set the width of your carousel */
+	/* height: 60vh; */
+	overflow: hidden;
+	position: relative; /* Positioning for absolute positioned children */
+	margin: 0 auto; /* Center the carousel horizontally */
+	padding: 1rem;
+	background: #101717;
+	animation: bounce 3s ease-in-out alternate infinite; 
+	box-shadow: .4rem .8rem 1rem #000000;
+	border-radius: 3rem;
+	
+}
+
+.carousel-inner {
+	width: 100%; 
+	transition: transform 0.5s ease;
+	display: flex; 
+}
+
+.slide {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
+	text-align: center;
+}
+
+.wrapper-content-hobby-card {
+	padding: 0 5rem;
+	margin-bottom: 4rem;
+}
+
+.wrapper-content-hobby-card p{
+	text-align: center;
+	margin-top: 1rem;
+
+}
+
+.prev, .next {
+	font-size: 2rem;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	padding: 16px;
+	text-shadow: .4rem .8rem 1rem #000000;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.prev {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}
+
+.hobby-card-title h2 {
+	font-size: 3rem;
+	margin: 2rem 5rem;
+}
+
+.wrapper-content-hobby-card iframe{
+	margin: 0 5rem;
+	border-radius: 1rem;
+	box-shadow: -.4rem -.3rem .5rem #171c1e, .4rem .8rem 1rem #090b0c;
+}
+
 
 
 
@@ -606,6 +748,10 @@ h4{
 
 
 /* CONTACT ME  */
+
+#contactMe.light-container {
+	height: 60vh;
+}
 
 .wrapper-contactMe {
 	padding: 10vh 2rem;
@@ -657,14 +803,17 @@ h4{
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row nowrap;
-	margin: 0 auto;
+	margin: 1rem auto;
 	max-width: 150px;
 	width: 20%;
 	background-color: white;
 	border-radius: 1rem;
+	transition: .2s ease;
 }
 .submit-wrapper:hover {
-	background-color: rgb(201, 201, 201);
+	background-color: rgb(251, 251, 251);
+	transform: scale(1.05);
+	box-shadow: .3rem .8rem 1rem #000000;
 }
 
 .submit-wrapper h2{
@@ -693,6 +842,32 @@ h4{
 } 
 
 
+::-webkit-scrollbar {
+	width: 15px; /* Width of the scrollbar */	
+}
+
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+
+::-webkit-scrollbar-thumb {
+	background: #1f2727; 
+	border-radius: 20px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #394848;
+}
+
+/* Handle when being dragged */
+::-webkit-scrollbar-thumb:active {
+	background:	rgb(83, 101, 109); 
+}
+
+
 
 
 /* BREAK POINTS */
@@ -703,16 +878,69 @@ h4{
 	.header {
 		padding: .8rem 5%;
 	}
-	.timelineCard h4{ 
-		top: 20%;
-		font-size: 1.3rem;
+
+	.early-life p {
+		font-size: 1rem;
+	}
+
+	.btn p {
+		font-size: .8rem;
+	}
+
+	.wrapper-timeline {
+		height: fit-content;
+	}
+
+	.wrapper-row-timelineCard {
+		display: flex;
+		flex-flow: column wrap;
+		
+		align-items: center;
+		width: 100%;
 	}
 
 	.timelineCard {
-		width: 100%;
-		/* display: block; */
-		margin: .5rem;
-		border-radius: 1rem;
+		width: 60%;
+	}
+
+	.timelineCard h4{ 
+		font-size: 2rem;
+	}
+
+	.modalContent p{ 
+		font-size: 1rem;
+	}
+
+	.project-group {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+
+	.project-card-container {
+		margin: 2rem 0;
+		width: 90%;
+	}
+
+	.card-front p {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.card-front b{
+		font-size: 3rem;
+	}
+
+	.wrapper-cardImg {
+		display: none;
+	}
+	
+	/* HOBBIES  */
+
+	.wrapper-content-hobby-card iframe{ 
+		width: 70%;
+		
 	}
 }
 
@@ -768,25 +996,39 @@ h4{
 		transition-delay: calc(.15s * var(--i));
 	}
 
+	.wrapper-home{
+		flex-direction: column;
+		padding-bottom: 5rem;
+	}
+
+	.wrapper-leftHome, .wrapper-rightHome {
+		margin-top: 3rem;
+		width: 100%;
+		align-items: center;
+	}
+	
 	.wrapper-userImg {
 		width: 80%;
 	}
 
+	.btn {
+		margin: 2rem 1rem;
+	}
+
 	.timelineCard {
-		aspect-ratio: 0;
-		width: 100%;
-		animation: none;
-		aspect-ratio: 0;
+
+		width: 60%;
+
 	}
 }
 
 @media (max-width: 600px){
 
-	/* HOME */
-
-	.wrapper-leftHome, .wrapper-rightHome {
-		width: 100%;
+	.wrapper-title h1 {
+		font-size: 2rem;
 	}
+
+	/* HOME */
 
 	.title h2{
 		font-size: 1.8rem;
@@ -806,6 +1048,33 @@ h4{
 	#btn-hire, #btn-dl-resume {
 		font-size: 1rem;
 		margin: .5rem .5rem;
+	}
+
+	.submit-wrapper h2{
+		margin: 0;
+	}
+
+	.submit-wrapper i{
+		display: none;
+	}
+
+	.card-front b{
+		font-size: 2rem;
+	}
+
+	/* HOBBIES  */
+	.hobby-card-title h2{
+		font-size: 1rem;
+	}
+
+	.wrapper-content-hobby-card iframe{ 
+		margin: 0;
+		width: 100%;
+		height: fit-content;
+	}
+
+	#contactMe  form input, #agenda, #message {
+		width: 100%;
 	}
 
 }
